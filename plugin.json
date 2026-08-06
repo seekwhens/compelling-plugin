@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "compelling",
+  "version": "0.1.0",
+  "description": "Build lead lists and automate enrichment with Compelling AI agents: source target accounts, find contacts, enrich any data point, and rank accounts by ICP fit.",
+  "author": {
+    "name": "Compelling",
+    "url": "https://compelling.ai"
+  },
+  "homepage": "https://compelling.ai",
+  "repository": "https://github.com/seekwhens/compelling-plugin",
+  "license": "MIT",
+  "keywords": [
+    "lead-generation",
+    "enrichment",
+    "tam-sourcing",
+    "contacts",
+    "b2b-data",
+    "sales",
+    "gtm"
+  ]
+}
