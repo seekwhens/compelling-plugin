@@ -41,10 +41,27 @@ Then reload the window and open Customize. Connect the MCP with your Compelling 
 
 Setup docs: https://compelling.notion.site/Compelling-MCP-3cfc763a76238174a7aaf14f7e6353fb
 
+## Install in Codex
+
+Codex CLI loads the Agent Plugins format natively (skills + `mcp.json`, `streamable-http`):
+
+```bash
+git clone https://github.com/seekwhens/compelling-plugin ~/.config/codex/plugins/compelling
+```
+
+or from a local checkout: `codex plugins install ./compelling-plugin`. Then connect the
+`compelling` MCP server with your Compelling account (OAuth).
+
+## ChatGPT
+
+In the ChatGPT app, use the Compelling connector directly (Settings → Connectors →
+`https://mcp.compelling.ai`) — chat clients consume the MCP server, not this plugin bundle.
+
 ## Other clients
 
 Any [Agent Plugins](https://agent-plugins.org/specification)-compatible client can load this
-directory (spec v1.0.0). The repo additionally ships the Claude Code plugin layout
+directory (spec v1.0.0) — the spec's client list includes VS Code, Cursor, GitHub Copilot,
+ChatGPT/Codex, and Kiro. The repo additionally ships the Claude Code plugin layout
 (`.claude-plugin/`), so both ecosystems resolve the same skills and MCP server.
 
 ## Structure
