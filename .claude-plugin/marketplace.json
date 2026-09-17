@@ -1,0 +1,15 @@
+{
+  "name": "compelling",
+  "description": "Official Compelling plugin: build lead lists and automate enrichment with Compelling AI agents from your coding agent.",
+  "owner": {
+    "name": "Compelling",
+    "url": "https://compelling.ai"
+  },
+  "plugins": [
+    {
+      "name": "compelling",
+      "source": "./",
+      "description": "Build lead lists and automate enrichment with Compelling AI agents: TAM sourcing, contact discovery, enrichment, and ICP ranking via the Compelling MCP."
+    }
+  ]
+}
