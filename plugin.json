@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "compelling",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Build lead lists and automate enrichment with Compelling AI agents: source target accounts, find contacts, enrich any data point, and rank accounts by ICP fit.",
   "author": {
     "name": "Compelling",

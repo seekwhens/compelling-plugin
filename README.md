@@ -73,6 +73,7 @@ mcp.json                           # Agent Plugins MCP declaration
 .claude-plugin/marketplace.json    # Claude Code marketplace catalog (this repo)
 .mcp.json                          # Claude Code MCP declaration
 .codex-plugin/plugin.json          # OpenAI Codex plugin manifest (icon, display name)
+.agents/plugins/marketplace.json   # OpenAI Codex marketplace catalog (this repo)
 assets/logo.png                    # Plugin icon
 skills/
   build-tam-list/SKILL.md
