@@ -1,6 +1,6 @@
 {
   "name": "compelling",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "description": "Find and qualify B2B target companies, research contacts and custom buying signals, and prioritize accounts with Compelling AI agents.",
   "author": {
     "name": "Compelling",
@@ -24,8 +24,8 @@
       "Estimate credit costs"
     ],
     "websiteURL": "https://compelling.ai",
-    "privacyPolicyURL": "https://www.compelling.ai/legal/privacy-notice",
-    "termsOfServiceURL": "https://www.compelling.ai/legal/terms-and-conditions",
+    "privacyPolicyURL": "https://trust.compelling.ai?itemUid=63f59def-eb18-4135-95a1-addeb7463801",
+    "termsOfServiceURL": "https://trust.compelling.ai?itemUid=0d553957-8301-444e-a66f-3a7715270242",
     "defaultPrompt": [
       "Find 10 machinery manufacturers in Germany with 100-500 employees that use SAP.",
       "Find IT leaders for the companies in my list and research their business emails and LinkedIn profiles.",
@@ -91,7 +91,7 @@
         "commerce_description": "Users purchase a Compelling subscription that includes usage credits. Subscription purchase and payment take place in the Compelling workspace. MCP research tools consume workspace credits; the MCP server does not process payments."
       },
       "publication": {
-        "release_notes": "Clarified company research descriptions and improved workflow guidance.",
+        "release_notes": "Updated privacy and legal information.",
         "translations": {
           "de-DE": {
             "subtitle": "Zielkunden finden & bewerten",
