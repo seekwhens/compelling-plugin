@@ -1,6 +1,6 @@
 ---
 name: build-tam-list
-description: "Find target companies and build B2B prospect lists by location, industry and custom customer criteria. Use for new company discovery or TAM sourcing, including DACH Mittelstand and industrial markets (Firmenrecherche, Zielkundenliste). Reading an existing list or explaining prospecting concepts does not require sourcing."
+description: "Find target companies and build B2B prospect lists by location, industry and custom customer criteria. Use for new company discovery or TAM sourcing, across the user’s chosen markets and company segments (Firmenrecherche, Zielkundenliste). Reading an existing list or explaining prospecting concepts does not require sourcing."
 ---
 
 # Find target companies in Compelling

@@ -1,6 +1,6 @@
 ---
 name: enrich-contacts
-description: "Research company data, custom buying signals and business contact details in Compelling lists; find decision-makers when needed. Use for technologies, certifications, hiring activity, work emails or LinkedIn profiles, including DACH firms (Firmenrecherche, Ansprechpartner, Datenanreicherung). Reading saved values alone does not require new research."
+description: "Research company data, custom buying signals and business contact details in Compelling lists; find decision-makers when needed. Use for technologies, certifications, hiring activity, work emails or LinkedIn profiles, for companies in the user’s chosen markets (Firmenrecherche, Ansprechpartner, Datenanreicherung). Reading saved values alone does not require new research."
 ---
 
 # Research companies and contacts in Compelling

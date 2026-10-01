@@ -1,9 +1,8 @@
 # Compelling — Agent Plugin
 
 Find and qualify B2B target companies with [Compelling](https://compelling.ai) AI research
-agents, directly from ChatGPT, Codex or another connected client. Research Germany, Austria
-and Switzerland (DACH), including Mittelstand and industrial markets, or your chosen market
-elsewhere. Build lists using your own criteria, find decision-makers, research custom signals
+agents, directly from ChatGPT, Codex or another connected client. Research your chosen
+markets and company segments. Build lists using your own criteria, find decision-makers, research custom signals
 and prioritize accounts using an explicit customer-fit rubric.
 
 Developed in Cologne, Germany. Compelling uses European infrastructure. Saved results remain
