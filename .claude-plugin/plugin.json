@@ -1,8 +1,8 @@
 {
   "name": "compelling",
   "displayName": "Compelling",
-  "version": "0.3.0",
-  "description": "Build lead lists and automate enrichment with Compelling AI agents: source target accounts, find contacts, enrich any data point, and rank accounts by ICP fit.",
+  "version": "0.3.12",
+  "description": "Find and qualify B2B target companies, research contacts and custom buying signals, and prioritize accounts in DACH and other markets with Compelling AI agents.",
   "author": {
     "name": "Compelling",
     "url": "https://compelling.ai"
@@ -12,11 +12,25 @@
   "license": "MIT",
   "keywords": [
     "lead-generation",
-    "enrichment",
+    "sales-prospecting",
+    "lead-lists",
     "tam-sourcing",
-    "contacts",
+    "target-account-research",
+    "contact-discovery",
+    "contact-enrichment",
+    "email-enrichment",
+    "firmographic-data",
+    "technographic-data",
+    "funding-research",
+    "icp-scoring",
+    "lead-scoring",
     "b2b-data",
-    "sales",
-    "gtm"
+    "crm-integrations",
+    "dach",
+    "company-research",
+    "buying-signals",
+    "firmenrecherche",
+    "zielkunden",
+    "ansprechpartner"
   ]
 }

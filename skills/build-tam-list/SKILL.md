@@ -1,18 +1,24 @@
 ---
 name: build-tam-list
-description: Source a target market (TAM) list of companies in Compelling. Use when the user wants to build a lead list, find companies matching an ICP ("B2B SaaS in DACH, 50-500 employees"), source accounts for outbound, or start any new prospecting effort from scratch.
+description: "Find target companies and build B2B prospect lists by location, industry and custom customer criteria. Use for new company discovery or TAM sourcing, including DACH Mittelstand and industrial markets (Firmenrecherche, Zielkundenliste). Reading an existing list or explaining prospecting concepts does not require sourcing."
 ---
 
-# Build a TAM list in Compelling
+# Find target companies in Compelling
 
-Source companies that match a target-market definition into a fresh Compelling list.
+Source companies that match the user's customer criteria into a fresh Compelling list.
+
+For DACH requests, resolve DACH to Germany, Austria and Switzerland. Research can cover
+Mittelstand, industrial companies, consultancies and IT service providers; preserve the user's
+actual geography and segment, including markets outside DACH. Keep custom criteria such as
+SAP usage, ISO 13485 certification or hiring activity explicit and distinguish required
+criteria from optional signals. Do not treat missing evidence as a confirmed match.
 
 ## Workflow
 
 1. **Confirm the workspace** with `compelling_whoami` and tell the user which workspace you are operating in before touching data.
 2. **Mint a fresh list** with `compelling_create_list` — never source into an existing list unless the user explicitly asks. Share the returned link so the user can open the list in Compelling.
 3. **Clarify the TAM definition** before spending credits. You need:
-   - a natural-language `search_prompt` (e.g. "B2B SaaS companies in the DACH region, 50-500 employees")
+   - a natural-language `search_prompt` (e.g. "Machinery manufacturers in Germany, 100-500 employees, that use SAP")
    - at least one per-company match `criteria` (each becomes a checkable column, e.g. "has a mobile app", "sells to enterprises")
    - a `target_size` (how many fully-matched companies the user wants, max 500)
 4. **Offer a cost preview** with `compelling_estimate_credits(action='find_companies')` — sourcing costs 5 credits + criteria cost per company. Ask whether the user wants the estimate; do not price every run automatically.
@@ -25,3 +31,9 @@ Source companies that match a target-market definition into a fresh Compelling l
 - `prompt_ambiguous` status means the search prompt was too broad — refine it with the user and restart rather than retrying unchanged.
 - Do not stack unrelated segments into one list; one TAM definition per list keeps criteria columns meaningful.
 - After sourcing, the natural next steps are contacts and enrichment — see the `enrich-contacts` skill — and scoring, see `rank-by-icp`.
+
+## Scope and authorization
+
+An estimate-only request does not authorize creating a list or starting sourcing. Stay within
+the requested company count, criteria and authorized budget. Reuse existing authorization
+for the same scope; do not repeat paid runs solely to improve an answer.

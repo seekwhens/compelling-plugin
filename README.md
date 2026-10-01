@@ -1,16 +1,22 @@
 # Compelling — Agent Plugin
 
-Build lead lists and automate enrichment with [Compelling](https://compelling.ai) AI agents,
-directly from your coding or chat agent.
+Find and qualify B2B target companies with [Compelling](https://compelling.ai) AI research
+agents, directly from ChatGPT, Codex or another connected client. Research Germany, Austria
+and Switzerland (DACH), including Mittelstand and industrial markets, or your chosen market
+elsewhere. Build lists using your own criteria, find decision-makers, research custom signals
+and prioritize accounts using an explicit customer-fit rubric.
+
+Developed in Cologne, Germany. Compelling uses European infrastructure. Saved results remain
+in your Compelling workspace, where you can use its native CRM integrations.
 
 This is an [Agent Plugin](https://agent-plugins.org) bundling:
 
 - **MCP server** — the remote Compelling MCP at `https://mcp.compelling.ai` (Streamable HTTP,
   OAuth). Connect with your Compelling account; the connection is scoped to your workspace.
 - **Skills** — playbooks that teach your agent to use Compelling well:
-  - `build-tam-list` — source a target market into a fresh list
-  - `enrich-contacts` — find decision-makers and research emails, LinkedIn profiles, or any custom data point
-  - `rank-by-icp` — score accounts 0-100 against your ICP and read the list sorted by fit
+  - `build-tam-list` — find target companies by geography and custom criteria
+  - `enrich-contacts` — research company data and buying signals, or find and enrich decision-makers
+  - `rank-by-icp` — prioritize target companies with explicit, weighted customer-fit criteria
   - `feedback` — report a bug or rough edge from right inside your agent
 
 ## Requirements
@@ -43,14 +49,18 @@ Setup docs: https://compelling.notion.site/Compelling-MCP-3cfc763a76238174a7aaf1
 
 ## Install in Codex
 
-Codex CLI loads the Agent Plugins format natively (skills + `mcp.json`, `streamable-http`):
+Add the marketplace, then install the plugin:
 
 ```bash
-git clone https://github.com/seekwhens/compelling-plugin ~/.config/codex/plugins/compelling
+codex plugin marketplace add seekwhens/compelling-plugin
+codex plugin add compelling@compelling
 ```
 
-or from a local checkout: `codex plugins install ./compelling-plugin`. Then connect the
-`compelling` MCP server with your Compelling account (OAuth).
+For a local checkout, use `codex plugin marketplace add /absolute/path/to/compelling-plugin`
+and the same install command. Start a new session, then connect the `compelling` MCP server
+with your Compelling account (OAuth). Existing-plugin update packages preserve the original
+MCP server declaration. Versions 0.3.6 and 0.3.7 added explicit OAuth scopes and can
+be rejected as a server-configuration change when replacing an existing installation.
 
 ## ChatGPT
 
