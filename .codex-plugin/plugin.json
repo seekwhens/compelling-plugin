@@ -1,6 +1,6 @@
 {
   "name": "compelling",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Build lead lists and automate enrichment with Compelling AI agents: source target accounts, find contacts, enrich any data point, and rank accounts by ICP fit.",
   "author": {
     "name": "Compelling",
@@ -13,6 +13,10 @@
     "shortDescription": "Lead lists, enrichment, and ICP ranking with AI agents",
     "developerName": "Compelling",
     "category": "Business & Operations",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://compelling.ai",
+    "privacyPolicyURL": "https://www.compelling.ai/legal/privacy-notice",
+    "termsOfServiceURL": "https://www.compelling.ai/legal/terms-and-conditions",
     "logo": "./assets/logo.png",
     "composerIcon": "./assets/logo.png"
   }

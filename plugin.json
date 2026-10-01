@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "compelling",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Build lead lists and automate enrichment with Compelling AI agents: source target accounts, find contacts, enrich any data point, and rank accounts by ICP fit.",
   "author": {
     "name": "Compelling",
@@ -19,13 +19,26 @@
     "sales",
     "gtm"
   ],
-  "logo": "assets/logo.png",
-  "interface": {
-    "displayName": "Compelling",
-    "shortDescription": "Lead lists, enrichment, and ICP ranking with AI agents",
-    "developerName": "Compelling",
-    "category": "Business & Operations",
-    "logo": "./assets/logo.png",
-    "composerIcon": "./assets/logo.png"
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Compelling",
+        "shortDescription": "Lead lists, enrichment, and ICP ranking with AI agents",
+        "longDescription": "Compelling turns a description of your target market into a ready-to-use lead list. Source matching companies, find the right decision-makers, research any data point such as work emails, LinkedIn profiles, or custom questions, and rank accounts against your ideal customer profile. Results live in your Compelling workspace and sync to your CRM.",
+        "developerName": "Compelling",
+        "category": "Business & Operations",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://compelling.ai",
+        "privacyPolicyURL": "https://www.compelling.ai/legal/privacy-notice",
+        "termsOfServiceURL": "https://www.compelling.ai/legal/terms-and-conditions",
+        "defaultPrompt": [
+          "Use Compelling to build a list of B2B SaaS companies in DACH with 50 to 500 employees.",
+          "Use Compelling to find the heads of sales for the accounts in my latest list.",
+          "Use Compelling to rank my target accounts by fit with our ideal customer profile."
+        ],
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      }
+    }
   }
 }

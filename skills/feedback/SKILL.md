@@ -14,7 +14,7 @@ Before filing anything, collect (from the conversation, not by re-running paid t
 - What the user tried to do, and which tool call failed or misbehaved (tool name + arguments, minus anything sensitive).
 - The exact error text or the unexpected output.
 - The `list_id` / `question_id` involved, if any.
-- Which client the user is in (Claude, Claude Code, Cursor, ChatGPT, ...).
+- Which AI client the user is working in (for example ChatGPT, Codex, Cursor).
 
 **Never include credentials, tokens, or personal contact data (emails, phone numbers) in a report.**
 
@@ -35,5 +35,5 @@ Title: <one-line symptom, e.g. "run_insight returns dispatch_failed for contact 
 **What I did:** <tool + arguments>
 **What happened:** <error/output>
 **Expected:** <what should have happened>
-**Client:** <Claude / Cursor / ...>
+**Client:** <the AI client in use>
 ```

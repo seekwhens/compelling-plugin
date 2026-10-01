@@ -54,8 +54,10 @@ or from a local checkout: `codex plugins install ./compelling-plugin`. Then conn
 
 ## ChatGPT
 
-In the ChatGPT app, use the Compelling connector directly (Settings → Connectors →
-`https://mcp.compelling.ai`) — chat clients consume the MCP server, not this plugin bundle.
+Once listed, install Compelling from the Plugin Directory at https://chatgpt.com/plugins.
+
+Until then, add it in developer mode: Plugins, Create app, server URL `https://mcp.compelling.ai`,
+authentication OAuth. Then connect with your Compelling account and pick your workspace.
 
 ## Other clients
 
