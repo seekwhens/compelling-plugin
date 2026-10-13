@@ -33,5 +33,7 @@
     "zielkunden",
     "ansprechpartner"
   ],
-  "privacyPolicyUrl": "https://www.compelling.ai/legal/privacy-notice"
+  "privacyPolicyUrl": "https://www.compelling.ai/legal/privacy-notice",
+  "termsOfServiceUrl": "https://www.compelling.ai/legal/terms-and-conditions",
+  "supportUrl": "https://www.compelling.ai/contact"
 }
