@@ -1,12 +1,25 @@
-# Compelling — Agent Plugin
+# Compelling Agent Plugin
 
-Find and qualify B2B target companies with [Compelling](https://compelling.ai) AI research
-agents, directly from ChatGPT, Codex or another connected client. Research your chosen
-markets and company segments. Build lists using your own criteria, find decision-makers, research custom signals
-and prioritize accounts using an explicit customer-fit rubric.
+Build B2B target lists with [Compelling](https://compelling.ai) directly in Claude, ChatGPT, Codex,
+Cursor or another AI client. For sales and business development teams in any B2B market, from
+German manufacturers to IT service providers and consultancies.
 
-Developed in Cologne, Germany. Compelling uses European infrastructure. Saved results remain
-in your Compelling workspace, where you can use its native CRM integrations.
+Describe your ideal customer in your own words: industry, location, size, technologies,
+certifications, products or hiring activity. Compelling's AI research agents find matching
+companies and check each one against your criteria.
+
+- **Find target companies:** turn a plain-language description into a list of your total addressable market (TAM).
+- **Find decision-makers:** identify the right people by role and research business emails and LinkedIn profiles.
+- **Research anything:** answer custom questions per company, such as revenue, headcount, tech stack or funding, with source evidence.
+- **Rank by fit:** score accounts against your weighted ideal customer profile (ICP) and see why each one ranks where it does.
+
+Results are saved as live lists in your Compelling workspace, with native integrations for
+HubSpot, Salesforce, Pipedrive, Monday CRM and more.
+
+Try: "Find 10 machinery manufacturers in Germany with 100-500 employees that use SAP."
+
+Requires a Compelling account. Built in Cologne, Germany, on European infrastructure. Access is
+limited to your connected workspace.
 
 This is an [Agent Plugin](https://agent-plugins.org) bundling:
 
