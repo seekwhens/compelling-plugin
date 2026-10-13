@@ -18,8 +18,8 @@ HubSpot, Salesforce, Pipedrive, monday.com and more.
 
 Try: "Find 10 machinery manufacturers in Germany with 100-500 employees that use SAP."
 
-Requires a Compelling account. Built in Cologne, Germany, on European infrastructure. Access is
-limited to your connected workspace.
+Requires a Compelling account. Built in Cologne, Germany, on European infrastructure. Your AI
+client only sees data in the Compelling workspace you connect.
 
 This is an [Agent Plugin](https://agent-plugins.org) bundling:
 
