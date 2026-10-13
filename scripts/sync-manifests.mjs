@@ -47,7 +47,7 @@ const codex = {
   keywords: root.keywords,
 };
 
-// Cursor (also read by Grok Bot): MCP inline with explicit http transport.
+// Cursor (also read by Grok Bot): MCP inline so transport is inferred from url.
 // displayName is accepted by Cursor's manifest schema but not yet in its public docs.
 const cursor = {
   name: root.name,
@@ -56,7 +56,7 @@ const cursor = {
   author: { name: root.author.name },
   logo: LOGO,
   skills: "./skills/",
-  mcpServers: { [root.name]: { type: "http", url: MCP_URL } },
+  mcpServers: { [root.name]: { url: MCP_URL } },
 };
 
 // Cursor / Grok Bot look for .cursor-plugin/marketplace.json first, then .claude-plugin/marketplace.json

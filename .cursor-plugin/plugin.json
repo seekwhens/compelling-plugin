@@ -36,7 +36,6 @@
   "skills": "./skills/",
   "mcpServers": {
     "compelling": {
-      "type": "http",
       "url": "https://mcp.compelling.ai"
     }
   }
