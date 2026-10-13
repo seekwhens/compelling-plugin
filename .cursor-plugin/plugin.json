@@ -1,0 +1,42 @@
+{
+  "name": "compelling",
+  "displayName": "Compelling",
+  "version": "0.3.18",
+  "description": "Find and qualify B2B target companies, research contacts and custom buying signals, and prioritize accounts with Compelling AI agents.",
+  "author": {
+    "name": "Compelling"
+  },
+  "homepage": "https://compelling.ai",
+  "repository": "https://github.com/seekwhens/compelling-plugin",
+  "license": "MIT",
+  "keywords": [
+    "lead-generation",
+    "sales-prospecting",
+    "lead-lists",
+    "tam-sourcing",
+    "target-account-research",
+    "contact-discovery",
+    "contact-enrichment",
+    "email-enrichment",
+    "firmographic-data",
+    "technographic-data",
+    "funding-research",
+    "icp-scoring",
+    "lead-scoring",
+    "b2b-data",
+    "crm-integrations",
+    "dach",
+    "company-research",
+    "buying-signals",
+    "firmenrecherche",
+    "zielkunden",
+    "ansprechpartner"
+  ],
+  "logo": "assets/logo.png",
+  "skills": "./skills/",
+  "mcpServers": {
+    "compelling": {
+      "url": "https://mcp.compelling.ai"
+    }
+  }
+}

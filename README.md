@@ -34,7 +34,8 @@ Then connect the `compelling` MCP server with your Compelling account (OAuth) wh
 
 ## Install in Cursor / Grok Bot
 
-Once listed in the Cursor Marketplace: Customize → search **Compelling** → Install.
+Once listed in the Cursor Marketplace: Customize → search **Compelling** → Install. Grok Bot uses
+the same Cursor plugin format (`.cursor-plugin/`), so the listing covers both.
 
 Until then, load locally:
 
@@ -78,17 +79,28 @@ ChatGPT/Codex, and Kiro. The repo additionally ships the Claude Code plugin layo
 ## Structure
 
 ```
-plugin.json                        # Agent Plugins manifest (agent-plugins.org)
+plugin.json                        # Agent Plugins manifest (agent-plugins.org), single source of truth
 mcp.json                           # Agent Plugins MCP declaration
-.claude-plugin/plugin.json         # Claude Code plugin manifest
+.claude-plugin/plugin.json         # Claude Code plugin manifest (generated)
 .claude-plugin/marketplace.json    # Claude Code marketplace catalog (this repo)
-.mcp.json                          # Claude Code MCP declaration
-.codex-plugin/plugin.json          # OpenAI Codex plugin manifest (icon, display name)
+.mcp.json                          # Claude Code / Codex MCP declaration
+.codex-plugin/plugin.json          # OpenAI Codex / ChatGPT manifest (generated)
 .agents/plugins/marketplace.json   # OpenAI Codex marketplace catalog (this repo)
+.cursor-plugin/plugin.json         # Cursor / Grok Bot manifest (generated)
+.cursor-plugin/marketplace.json    # Cursor / Grok Bot marketplace catalog (generated)
 assets/logo.png                    # Plugin icon
 skills/
   build-tam-list/SKILL.md
   enrich-contacts/SKILL.md
   rank-by-icp/SKILL.md
   feedback/SKILL.md
+scripts/
+  sync-manifests.mjs               # regenerates the client manifests from plugin.json
+  package-openai.sh                # builds the OpenAI Plugin Directory upload ZIP
 ```
+
+## Releasing
+
+1. Edit `plugin.json` only (version, listing copy, OpenAI review data).
+2. Run `node scripts/sync-manifests.mjs` to regenerate the client manifests. CI fails if they drift.
+3. For the OpenAI Plugin Directory, run `scripts/package-openai.sh` and upload the ZIP from `dist/`.
