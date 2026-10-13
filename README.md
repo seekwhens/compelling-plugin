@@ -40,8 +40,10 @@ the same Cursor plugin format (`.cursor-plugin/`), so the listing covers both.
 Until then, load locally:
 
 ```bash
-ln -s /path/to/compelling-plugin ~/.cursor/plugins/local/compelling
+mkdir -p ~/.cursor/plugins/local && rsync -a --exclude .git /path/to/compelling-plugin/ ~/.cursor/plugins/local/compelling/
 ```
+
+Copy the folder rather than symlinking it: Cursor skips symlinks in `~/.cursor/plugins/local` that point outside that folder.
 
 Then reload the window and open Customize. Connect the MCP with your Compelling account (OAuth).
 
