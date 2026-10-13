@@ -23,7 +23,7 @@ Requires a Compelling account. Built in Cologne, Germany, on European infrastruc
 This is an [Agent Plugin](https://agent-plugins.org) bundling:
 
 - **MCP server** — the remote Compelling MCP at `https://mcp.compelling.ai` (Streamable HTTP,
-  OAuth). Connect with your Compelling account; the connection is scoped to your workspace.
+  OAuth). Connect with your Compelling account.
 - **Skills** — playbooks that teach your agent to use Compelling well:
   - `build-tam-list` — find target companies by geography and custom criteria
   - `enrich-contacts` — research company data and buying signals, or find and enrich decision-makers
@@ -72,9 +72,7 @@ codex plugin add compelling@compelling
 
 For a local checkout, use `codex plugin marketplace add /absolute/path/to/compelling-plugin`
 and the same install command. Start a new session, then connect the `compelling` MCP server
-with your Compelling account (OAuth). Existing-plugin update packages preserve the original
-MCP server declaration. Versions 0.3.6 and 0.3.7 added explicit OAuth scopes and can
-be rejected as a server-configuration change when replacing an existing installation.
+with your Compelling account (OAuth).
 
 ## ChatGPT
 
