@@ -14,7 +14,7 @@ companies and check each one against your criteria.
 - **Rank by fit:** score accounts against your weighted ideal customer profile (ICP) and see why each one ranks where it does.
 
 Results are saved as live lists in your Compelling workspace, with native integrations for
-HubSpot, Salesforce, Pipedrive, Monday CRM and more.
+HubSpot, Salesforce, Pipedrive, monday.com and more.
 
 Try: "Find 10 machinery manufacturers in Germany with 100-500 employees that use SAP."
 
