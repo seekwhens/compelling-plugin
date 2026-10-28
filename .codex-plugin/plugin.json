@@ -1,6 +1,6 @@
 {
   "name": "compelling",
-  "version": "0.3.18",
+  "version": "0.3.20",
   "description": "Build B2B target lists from your own criteria, find decision-makers and rank accounts by fit.",
   "author": {
     "name": "Compelling",
@@ -91,7 +91,7 @@
         "commerce_description": "Users purchase a Compelling subscription that includes usage credits. Subscription purchase and payment take place in the Compelling workspace. MCP research tools consume workspace credits; the MCP server does not process payments."
       },
       "publication": {
-        "release_notes": "Updated review test cases.",
+        "release_notes": "Clearer tool names and descriptions.",
         "translations": {
           "de-DE": {
             "subtitle": "Zielkunden finden & bewerten",
