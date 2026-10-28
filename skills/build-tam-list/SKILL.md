@@ -15,7 +15,7 @@ criteria from optional signals. Do not treat missing evidence as a confirmed mat
 
 ## Workflow
 
-1. **Confirm the workspace** with `compelling_whoami` and tell the user which workspace you are operating in before touching data.
+1. **Confirm the workspace** with `compelling_get_workspace` and tell the user which workspace you are operating in before touching data.
 2. **Mint a fresh list** with `compelling_create_list` — never source into an existing list unless the user explicitly asks. Share the returned link so the user can open the list in Compelling.
 3. **Clarify the TAM definition** before spending credits. You need:
    - a natural-language `search_prompt` (e.g. "Machinery manufacturers in Germany, 100-500 employees, that use SAP")
@@ -23,7 +23,7 @@ criteria from optional signals. Do not treat missing evidence as a confirmed mat
    - a `target_size` (how many fully-matched companies the user wants, max 500)
 4. **Offer a cost preview** with `compelling_estimate_credits(action='find_companies')` — sourcing costs 5 credits + criteria cost per company. Ask whether the user wants the estimate; do not price every run automatically.
 5. **Start sourcing** with `compelling_find_companies`. It runs asynchronously.
-6. **Wait server-side, don't busy-poll**: pass `wait_seconds` on the call, or check `compelling_tam_sourcing_status` with `wait_seconds` up to 60 — one long-poll call instead of sleeping and retrying.
+6. **Wait server-side, don't busy-poll**: pass `wait_seconds` on the call, or check `compelling_find_companies_status` with `wait_seconds` up to 60 — one long-poll call instead of sleeping and retrying.
 7. **Read results** with `compelling_read_list(record_type='accounts')` — that is ground truth, counters in status responses settle a few seconds late.
 
 ## Pitfalls

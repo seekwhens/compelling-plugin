@@ -1,6 +1,6 @@
 {
   "name": "compelling",
-  "version": "0.3.18",
+  "version": "0.3.20",
   "description": "Build B2B target lists from your own criteria, find decision-makers and rank accounts by fit.",
   "author": {
     "name": "Compelling",
@@ -44,32 +44,32 @@
             {
               "description": "Identify the connected workspace",
               "prompt": "Which Compelling workspace am I connected to?",
-              "tools_triggered": "compelling_whoami",
+              "tools_triggered": "compelling_get_workspace",
               "expected_behavior": "Report the workspace name Compelling Review without exposing authentication tokens or unrelated personal information."
             },
             {
               "description": "Discover workspace lists",
               "prompt": "Show me my most recent Compelling lists.",
-              "tools_triggered": "compelling_whoami, compelling_list_lists",
+              "tools_triggered": "compelling_get_workspace, compelling_list_lists",
               "expected_behavior": "Show accessible lists ordered by most recent edit, including My first list and its account count."
             },
             {
               "description": "Read existing Industry and Employees values for named fixture accounts",
               "prompt": "In 'My first list', show Account Name, Domain, Industry, and Employees for sonnen GmbH (sonnen.de), NetCologne (netcologne.de), and Lilium (lilium.com). Read the stored values only; do not research anything.",
-              "tools_triggered": "compelling_whoami, compelling_list_lists, compelling_list_insights, compelling_read_list",
+              "tools_triggered": "compelling_get_workspace, compelling_list_lists, compelling_list_insights, compelling_read_list",
               "expected_behavior": "Resolve My first list in Compelling Review. Discover the saved columns with compelling_list_insights: the employee-count column is named Employees in MCP and in the app UI. Filter the domain column by sonnen.de, netcologne.de, and lilium.com using the discovered question_id; do not guess column IDs or create a new Employees column. Read and return the stored company names, domains, Industry and Employees values. Fixture values: sonnen.de Utilities / 610; netcologne.de Telecommunications / 930; lilium.com Aviation & Aerospace / 990. Use only read tools; do not start research, change values, or spend credits."
             },
             {
               "description": "Estimate TAM sourcing without creating a list or starting work",
               "prompt": "In Compelling Review, what is the maximum credit cost to source ten companies headquartered in Germany, Austria, or Switzerland that offer a B2B SaaS product? Only estimate; do not create a list, source companies, or change any data.",
-              "tools_triggered": "compelling_whoami, compelling_list_lists, compelling_estimate_credits",
+              "tools_triggered": "compelling_get_workspace, compelling_list_lists, compelling_estimate_credits",
               "expected_behavior": "Confirm Compelling Review and use the existing My first list only as the list_id context required for the read-only estimate. Call compelling_estimate_credits with action=find_companies, target_size=10, criteria=['Headquartered in Germany, Austria, or Switzerland', 'Offers a B2B SaaS product'], and no optional criteria. Report the returned maximum and available balance: the verified estimate is 70 credits (10 x (5 base + 2 criteria)); the current returned estimate and balance remain authoritative. Do not call compelling_create_list or compelling_find_companies, create criteria columns, change My first list, run contact discovery, or spend credits."
             },
             {
               "description": "Source a ten-company TAM into a fresh review list",
               "prompt": "In Compelling Review, create a new list called 'Review TAM - DACH SaaS' and source ten companies. Use exactly these two criteria: 'Headquartered in Germany, Austria, or Switzerland' and 'Offers a B2B SaaS product'. Show the maximum credit estimate first. You may start if the estimate is at most 70 credits and my balance covers it. Then show the companies and whether they match both criteria. Do not find contacts or research contact details.",
-              "tools_triggered": "compelling_whoami, compelling_create_list, compelling_estimate_credits, compelling_find_companies, compelling_tam_sourcing_status, compelling_read_list",
-              "expected_behavior": "Confirm Compelling Review, create a fresh empty Review TAM - DACH SaaS list, and use its returned list_id throughout. Leave My first list and its fixture values unchanged. Use search_prompt='B2B SaaS companies headquartered in Germany, Austria, or Switzerland', target_size=10, criteria=['Headquartered in Germany, Austria, or Switzerland', 'Offers a B2B SaaS product'], optional_criteria=[] and no unrequested exclusions. Estimate with action=find_companies and exactly the same target_size and criteria. Report the returned maximum and balance; start compelling_find_companies only when the estimate is at most 70 credits and fits the balance, using the authorization in the prompt. Otherwise stop and explain. At most 70 credits are charged for the run, even if more than ten companies land in the list. Use wait_seconds and compelling_tam_sourcing_status to track asynchronous progress; call compelling_list_insights if needed to identify generated criterion columns, then read saved account records with compelling_read_list(record_type=accounts). A completed successful run should show the ten actual stored company names, domains, and the results for both mandatory criteria as two separate criterion columns; do not invent fixed company names. If results are fewer, pending, exhausted, cancelled, failed or prompt_ambiguous, report that state and actual records without claiming ten matches or silently restarting. Do not call compelling_find_contacts, compelling_contacts_run_status, or contact enrichment. Run this case once; before repeating, check existing review lists and active work to avoid duplicate credit-spending runs."
+              "tools_triggered": "compelling_get_workspace, compelling_create_list, compelling_estimate_credits, compelling_find_companies, compelling_find_companies_status, compelling_read_list",
+              "expected_behavior": "Confirm Compelling Review, create a fresh empty Review TAM - DACH SaaS list, and use its returned list_id throughout. Leave My first list and its fixture values unchanged. Use search_prompt='B2B SaaS companies headquartered in Germany, Austria, or Switzerland', target_size=10, criteria=['Headquartered in Germany, Austria, or Switzerland', 'Offers a B2B SaaS product'], optional_criteria=[] and no unrequested exclusions. Estimate with action=find_companies and exactly the same target_size and criteria. Report the returned maximum and balance; start compelling_find_companies only when the estimate is at most 70 credits and fits the balance, using the authorization in the prompt. Otherwise stop and explain. At most 70 credits are charged for the run, even if more than ten companies land in the list. Use wait_seconds and compelling_find_companies_status to track asynchronous progress; call compelling_list_insights if needed to identify generated criterion columns, then read saved account records with compelling_read_list(record_type=accounts). A completed successful run should show the ten actual stored company names, domains, and the results for both mandatory criteria as two separate criterion columns; do not invent fixed company names. If results are fewer, pending, exhausted, cancelled, failed or prompt_ambiguous, report that state and actual records without claiming ten matches or silently restarting. Do not call compelling_find_contacts, compelling_contacts_run_status, or contact enrichment. Run this case once; before repeating, check existing review lists and active work to avoid duplicate credit-spending runs."
             }
           ],
           "negative": [
@@ -91,7 +91,7 @@
         "commerce_description": "Users purchase a Compelling subscription that includes usage credits. Subscription purchase and payment take place in the Compelling workspace. MCP research tools consume workspace credits; the MCP server does not process payments."
       },
       "publication": {
-        "release_notes": "Updated review test cases.",
+        "release_notes": "Clearer tool names and descriptions.",
         "translations": {
           "de-DE": {
             "subtitle": "Zielkunden finden & bewerten",

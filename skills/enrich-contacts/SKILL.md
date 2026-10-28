@@ -11,7 +11,7 @@ URLs, and every other data point are **insights** — columns you define once an
 
 ## Workflow
 
-1. **Confirm the workspace** (`compelling_whoami`) and locate the list (`compelling_list_lists`).
+1. **Confirm the workspace** (`compelling_get_workspace`) and locate the list (`compelling_list_lists`).
 2. **Choose the requested work.** For company-only research, skip contact discovery and work
    with `record_type='accounts'`. Read saved values without new research when that is all the
    user asks for. **Find contacts only when requested or necessary to identify the requested

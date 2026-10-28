@@ -11,7 +11,7 @@
       "name": "compelling",
       "source": "./",
       "description": "Build B2B target lists from your own criteria, find decision-makers and rank accounts by fit.",
-      "version": "0.3.18",
+      "version": "0.3.20",
       "logo": "assets/logo.png",
       "category": "Business & Operations"
     }
