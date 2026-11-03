@@ -1,0 +1,43 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "compelling",
+  "displayName": "Compelling",
+  "version": "0.3.20",
+  "description": "Build B2B target lists from your own criteria, find decision-makers and rank accounts by fit.",
+  "author": {
+    "name": "Compelling",
+    "url": "https://compelling.ai"
+  },
+  "homepage": "https://compelling.ai",
+  "repository": "https://github.com/seekwhens/compelling-plugin",
+  "license": "MIT",
+  "keywords": [
+    "lead-generation",
+    "sales-prospecting",
+    "lead-lists",
+    "tam-sourcing",
+    "target-account-research",
+    "contact-discovery",
+    "contact-enrichment",
+    "email-enrichment",
+    "firmographic-data",
+    "technographic-data",
+    "funding-research",
+    "icp-scoring",
+    "lead-scoring",
+    "b2b-data",
+    "crm-integrations",
+    "dach",
+    "company-research",
+    "buying-signals",
+    "firmenrecherche",
+    "zielkunden",
+    "ansprechpartner"
+  ],
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "Find 10 machinery manufacturers in Germany with 100-500 employees that use SAP.",
+    "Find IT leaders for the companies in my list and research their business emails and LinkedIn profiles.",
+    "Rank the companies in my list by our target customer criteria and explain the scoring."
+  ]
+}
