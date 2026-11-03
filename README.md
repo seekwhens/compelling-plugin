@@ -81,6 +81,14 @@ Once listed, install Compelling from the Plugin Directory at https://chatgpt.com
 Until then, add it in developer mode: Plugins, Create app, server URL `https://mcp.compelling.ai`,
 authentication OAuth. Then connect with your Compelling account and pick your workspace.
 
+## Install in Antigravity
+
+Once listed in the Antigravity Marketplace: Customizations → Plugins → search **Compelling** →
+Install, or `agy plugin install compelling`.
+
+From a local checkout: `agy plugin install /absolute/path/to/compelling-plugin`. Then open
+Customizations and authenticate the `compelling` MCP server with your Compelling account (OAuth).
+
 ## Other clients
 
 Any [Agent Plugins](https://agent-plugins.org/specification)-compatible client can load this
@@ -100,6 +108,8 @@ mcp.json                           # Agent Plugins MCP declaration
 .agents/plugins/marketplace.json   # OpenAI Codex marketplace catalog (this repo)
 .cursor-plugin/plugin.json         # Cursor / Grok Bot manifest (generated)
 .cursor-plugin/marketplace.json    # Cursor / Grok Bot marketplace catalog (generated)
+.antigravity-plugin/plugin.json    # Google Antigravity manifest (generated)
+mcp_config.json                    # Google Antigravity MCP declaration (generated)
 skills/
   build-tam-list/SKILL.md
   enrich-contacts/SKILL.md
